@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jobs</title>
+</head>
+<body>
+<h1>Jobs</h1>
+<table width="100%">
+    <tr style="background-color:gray">
+        <th>Id</th>
+        <th>Title</th>
+        <th>Location</th>
+        <th>Min Salary</th>
+    </tr>
+    {% for job in jobs %}
+     <tr>
+         <td>{{job.0}}</td>
+         <td>{{job.1}}</td>
+         <td>{{job.2}}</td>
+         <td>{{job.3}}</td>
+     </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>

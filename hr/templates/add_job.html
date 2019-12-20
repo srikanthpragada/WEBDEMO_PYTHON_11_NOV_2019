@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Job</title>
+</head>
+<body>
+<h2>Add Job</h2>
+<form method="post">
+    {% csrf_token %}
+    Title<br/>
+    <input type="text" name="title" size="30"/>
+    <p></p>
+    Location<br/>
+    <input type="text" name="location" size="30"/>
+    <p></p>
+    Minimum Salary<br/>
+    <input type="number" name="minsalary" size="10"/>
+    <p></p>
+    <input type="submit" value="Add Job"/>
+</form>
+</body>
+</html>
