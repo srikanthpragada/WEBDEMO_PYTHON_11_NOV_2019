@@ -8,4 +8,5 @@ urlpatterns = [
     path("country_info/", views.country_info),
     path("jobs/", job_views.list_jobs),
     path("addjob/", job_views.add_job),
+    path("addjob2/", job_views.add_job2),
 ]
