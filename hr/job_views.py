@@ -47,7 +47,7 @@ def add_job2(request):
         if not f.is_valid():
             return render(request, 'add_job2.html', {'form': f})
 
-        # Take data from clearned_data
+        # Take data from cleaned_data
         title = f.cleaned_data['title']
         location = f.cleaned_data['location']
         minsal = f.cleaned_data['minsal']
