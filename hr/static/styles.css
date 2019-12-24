@@ -1,0 +1,23 @@
+
+body {
+ font-family : calibri;
+ font-size:12pt;
+}
+.colhead {
+  background-color:black;
+  color:white;
+}
+.banner {
+  background-color:blue;
+  color:white;
+  font-family : calibri;
+  font-size:20pt;
+  font-weight:bold;
+  letter-spacing:5pt;
+}
+
+.menu {
+  background-color:lightgray;
+  font-family : calibri;
+  font-weight:bold;
+}

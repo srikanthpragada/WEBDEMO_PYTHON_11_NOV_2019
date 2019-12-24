@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Employee</title>
+    <link rel="stylesheet" href="{% static 'styles.css'%}"/>
+</head>
+<body>
+<div class="banner">Employees</div>
+<div class="menu">
+    <a href="/hr/emp/home">Home</a>
+    <a href="/hr/emp/list">List</a>
+    <a href="/hr/emp/add">Add</a>
+    <a href="/hr/emp/search">Search</a>
+</div>
+{% block body %}
+{% endblock %}
+
+</body>
+</html>

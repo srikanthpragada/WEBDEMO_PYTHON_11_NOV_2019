@@ -1,0 +1,27 @@
+{% extends "author_master.html" %}
+
+{% block body %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    function getAuthors() {
+       $.get("/hr/author/dosearch/?name=" + $("#name").val(),null, showAuthors);
+    }
+    function showAuthors(authors) {
+        output = "";
+        for(i=0; i < authors.length; i ++)
+             output += "<li>" + authors[i].name + "</li>";
+
+        $("#authors").html(output)
+    }
+
+</script>
+
+<h2>Search</h2>
+
+Name : <input type="text" id="name"/>
+<button onclick="getAuthors()">Go</button>
+<ul id="authors">
+
+</ul>
+
+{% endblock %}

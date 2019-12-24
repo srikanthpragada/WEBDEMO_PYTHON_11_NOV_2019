@@ -1,0 +1,33 @@
+{% extends "employee_master.html" %}
+
+{% block body %}
+
+<h2>List of Employees</h2>
+
+<table width="100%">
+    <tr class="colhead">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Desg</th>
+        <th>Salary</th>
+        <th>
+        </th>
+    </tr>
+
+    {% for emp in employees %}
+    <tr>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.desg}}</td>
+        <td style="text-align:right">{{emp.salary}}</td>
+        <td style="text-align:center">
+            <a href="/hr/emp/edit/{{emp.id}}">Edit</a>
+            <a onclick="return confirm('Do you want to delete employee?')"
+               href="/hr/emp/delete/{{emp.id}}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

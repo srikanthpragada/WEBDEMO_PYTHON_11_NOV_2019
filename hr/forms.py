@@ -1,4 +1,6 @@
 import django.forms as forms
+from django.forms import ModelForm
+from .models import Employee
 
 
 class JobForm(forms.Form):
@@ -8,5 +10,11 @@ class JobForm(forms.Form):
 
 
 class UpdateJobForm(forms.Form):
-    id  = forms.IntegerField()
+    id = forms.IntegerField()
     minsal = forms.IntegerField(min_value=5000, required=False)
+
+
+class EmployeeForm(ModelForm):
+    class Meta:
+        model = Employee
+        fields = '__all__'

@@ -1,0 +1,10 @@
+{% extends "employee_master.html" %}
+
+{% block body %}
+
+<h2>Summary</h2>
+No. of employees : {{summary.emp_count}}
+<p></p>
+Average Salary : {{summary.avg_salary | floatformat:0}}
+
+{% endblock %}
