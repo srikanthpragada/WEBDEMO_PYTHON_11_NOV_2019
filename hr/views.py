@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from datetime import datetime
 import requests
 
 
@@ -32,3 +33,9 @@ def country_info(request):
         return render(request, 'country_info.html',{'country': country})
     else:
         return HttpResponse("<h2>Sorry! Could not find country code!</h2>")
+
+def ajax_demo(request):
+    return render(request,'ajax_demo.html')
+
+def ajax_datetime(request):
+    return HttpResponse(str(datetime.now()))

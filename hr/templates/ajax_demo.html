@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function get_date_time()
+        {
+            $.get("/hr/datetime",null,show_date_time);
+        }
+
+        function show_date_time(response)
+        {
+           $("#datetime").text(response)
+        }
+    </script>
+</head>
+<body>
+<h1>Ajax Demo</h1>
+<button onclick="get_date_time()">Show me date and time!</button>
+<h2 style="color:red" id="datetime"></h2>
+</body>
+</html>

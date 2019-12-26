@@ -65,14 +65,14 @@ def employee_edit(request, id):
         form.save()   # Update employee in table
         return redirect("/hr/emp/list")
 
-#
-# def author_search(request):
-#     return render(request, 'author_search.html')
-#
-#
-# def author_do_search(request):
-#     name = request.GET['name']
-#     # convert author objects to dict
-#     authors = list(Author.objects.filter(name__contains=name).values())
-#     # send list of dict in the form of array of json objects
-#     return JsonResponse(authors, safe=False)
+
+def employee_search(request):
+    return render(request, 'employee_search.html')
+
+
+def search_employees(request):
+    name = request.GET['name']
+    # convert employee objects to dict
+    employees = list(Employee.objects.filter(name__contains=name).values())
+    # send list of dict in the form of array of json objects
+    return JsonResponse(employees, safe=False)
