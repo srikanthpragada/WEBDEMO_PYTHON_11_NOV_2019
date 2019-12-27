@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from . import views, job_views, employee_views
+from . import views, job_views, employee_views, class_views
 
 urlpatterns = [
     path('index/', views.index),
@@ -18,4 +18,5 @@ urlpatterns = [
     path("emp/dosearch/", employee_views.search_employees),
     path("ajax/", views.ajax_demo),
     path("datetime/", views.ajax_datetime),
+    path('employees/', class_views.EmployeesList.as_view()),  # class based view
 ]

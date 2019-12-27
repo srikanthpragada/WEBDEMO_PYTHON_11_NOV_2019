@@ -1,0 +1,23 @@
+<html>
+<body>
+<h2>List of Employees</h2>
+<table width="100%">
+    <tr class="colhead">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Desg</th>
+        <th>Salary</th>
+    </tr>
+
+    {% for emp in object_list %}
+    <tr>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.desg}}</td>
+        <td style="text-align:right">{{emp.salary}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
