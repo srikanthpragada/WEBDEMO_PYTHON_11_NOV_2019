@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from . import views, job_views, employee_views, class_views
+from .rest import rest_views
 
 urlpatterns = [
     path('index/', views.index),
@@ -19,4 +20,7 @@ urlpatterns = [
     path("ajax/", views.ajax_demo),
     path("datetime/", views.ajax_datetime),
     path('employees/', class_views.EmployeesList.as_view()),  # class based view
+    # Rest urls
+    path('rest/employees/', rest_views.process_employees),
+    path('rest/employees/<int:id>', rest_views.process_employee),
 ]
